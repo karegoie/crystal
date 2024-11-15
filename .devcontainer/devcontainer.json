@@ -6,12 +6,14 @@
     },
     "customizations": {
         "vscode": {
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "bash"
-            },
+            "settings":{
+					"terminal.integrated.shell.linux": "/bin/bash",
+					"lldb.executable": "/usr/bin/lldb"
+			},
             "extensions": [
                 "rust-lang.rust-analyzer",
                 "dbaeumer.vscode-eslint",
+                "vadimcn.vscode-lldb",
                 "svelte.svelte-vscode",
                 "GitHub.copilot",
                 "GitHub.copilot-chat"
