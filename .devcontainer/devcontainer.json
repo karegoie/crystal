@@ -1,0 +1,24 @@
+{
+    "name": "Tauri + Svelte Dev Environment",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "context": ".."
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.defaultProfile.linux": "bash"
+            },
+            "extensions": [
+                "rust-lang.rust-analyzer",
+                "dbaeumer.vscode-eslint",
+                "svelte.svelte-vscode",
+                "GitHub.copilot",
+                "GitHub.copilot-chat"
+            ]
+        }
+    },
+    "forwardPorts": [3000, 5000, 5173, 8080],
+    "postCreateCommand": "npm install --prefix ./svelte && cargo build --manifest-path ./src-tauri/Cargo.toml || true",
+    "remoteUser": "vscode"
+} 
